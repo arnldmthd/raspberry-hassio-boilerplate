@@ -10,7 +10,7 @@
 8. Use `./remote-connect.sh` (default password:ubuntu) to connect your Raspberry
 9. Change password per request and exit from ssh connection by exit
 10. Create SSH key on your local machine
-11. Add your SSH public key to Raspbery by `./add-ssh-key.sh`
+11. Add your SSH public key to Raspberry by `./add-ssh-key.sh`
 12. Test connection with `./remote-connect.sh` (should not ask password)
 13. add your WLAN ssid and password into file `*remote_ip` (1st line sid (only), 2nd line password (only))
 14. Run `./remote-init.sh` which pushed /project files into Raspberry. It also installs Docker, IP tools and sets up WLAN.
