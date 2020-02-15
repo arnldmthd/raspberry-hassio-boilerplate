@@ -14,6 +14,16 @@
 12. ./add-ssh-key.sh
 13. ./connect.sh (should not ask password)
 
+# Files
+
+```sh
+project/
+├── home-assistant        # API server
+├── mosquitto  
+└── zigbee2mqtt     
+```
+
+
 # Commands
 
 ```
