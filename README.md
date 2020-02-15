@@ -18,7 +18,7 @@
 
 ```sh
 project/
-├── home-assistant        # API server
+├── home-assistant       
 ├── mosquitto  
 └── zigbee2mqtt     
 ```
