@@ -1,5 +1,5 @@
 #!/bin/bash
-value=$(<raspberry_ip)
+value=$(<*remote_ip)
 echo "🧞‍♂  ssh ubuntu@$value"
 
 ssh ubuntu@$value

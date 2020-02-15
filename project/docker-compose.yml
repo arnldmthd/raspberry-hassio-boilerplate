@@ -8,7 +8,7 @@
         - '8123:8123'
         - '8943:8943'
       volumes:
-        - ./home-assistant/config:/config
+        - ./home-assistant/config/configuration.yaml:/config/configuration.yaml
         - '/etc/localtime:/etc/localtime:ro'
         - '/etc/timezone:/etc/timezone:ro'
       devices:
@@ -19,7 +19,7 @@
       container_name: zigbee2mqtt
       image: koenkk/zigbee2mqtt
       volumes:
-        - ./zigbee2mqtt/data:/app/data
+        - ./zigbee2mqtt/data/configuration.yaml:/app/data/configuration.yaml
         - /run/udev:/run/udev:ro
       devices:
         - /dev/ttyUSB0:/dev/ttyUSB0

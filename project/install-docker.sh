@@ -1,7 +1,7 @@
 
 
-echo "🧞‍♂ docker info"
-docker info
+echo "🧞‍♂  docker info"
+docker info > /dev/null
 if [ $? -eq 0 ]; then
     sudo usermod -a -G docker ${USER}
 else
