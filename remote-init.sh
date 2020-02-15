@@ -10,25 +10,7 @@ ssh ubuntu@$value sudo usermod -aG sudo ubuntu
 
 ## Copy Project files
 
-echo "
-🧞‍♂  ssh ubuntu@$value  '(rm -rf project && mkdir -p project)'
-"
-ssh ubuntu@$value '(rm -rf project && mkdir -p project)'
-
-## Language 
-
-# echo 'LC_CTYPE="fi_FI.UTF-8"
-# LC_ALL="fi_FI.UTF-8"
-# LANG="fi_FI.UTF-8" | sudo tee /etc/default/locale'
-
-# echo 'LC_CTYPE="fi_FI.UTF-8"
-# LC_ALL="fi_FI.UTF-8"
-# LANG="fi_FI.UTF-8"' | sudo tee /etc/default/locale
-
-echo "
-🧞‍  rsync -avz -e ssh project/ ubuntu@$value:/home/ubuntu/project/
-"
-rsync -avz -e ssh project/ ubuntu@$value:/home/ubuntu/project/
+./remote-copy-files.sh
 
 ## Docker Installation
 

@@ -1,6 +1,15 @@
+homeassistant:
+  name: Home
+  unit_system: metric
+  latitude: 65.9262352
+  longitude: 26.5262334
+  time_zone: Europe/Helsinki
+frontend:
+config:
+updater:
 mqtt:
   discovery: true
-  broker: mosquitto  # Remove if you want to use builtin-in MQTT broker
+  broker: mosquitto # Remove if you want to use builtin-in MQTT broker
   birth_message:
     topic: 'hass/status'
     payload: 'online'
