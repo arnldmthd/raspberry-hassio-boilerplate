@@ -2,7 +2,7 @@
 1. Download ubuntu
 2. Flash MicroSD with https://www.techradar.com/how-to/how-to-install-ubuntu-on-the-raspberry-pi
 3. Enable SSH by placing a file named “ssh” (without any extension) into the boot partition root of the SD card
-4. Safely remove MicroSD card and it into Raspberry
+4. Safely remove MicroSD card and place it into Raspberry
 5. Connect Raspberry and your home router with cable
 6. Start Raspberry, red led colors are fine. 
 6. Go to your router's admin panel (eg. http://192.168.1.1/), find device in DHCP list and reserve static IP address for your device.
