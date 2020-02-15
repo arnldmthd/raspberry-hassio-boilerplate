@@ -1,0 +1,9 @@
+mqtt:
+  discovery: true
+  broker: mosquitto  # Remove if you want to use builtin-in MQTT broker
+  birth_message:
+    topic: 'hass/status'
+    payload: 'online'
+  will_message:
+    topic: 'hass/status'
+    payload: 'offline'

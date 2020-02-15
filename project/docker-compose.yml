@@ -1,0 +1,44 @@
+  version: '3'
+  services:
+    home-assistant:
+      container_name: home-assistant
+      image: homeassistant/home-assistant
+      command: [ "python", "-m", "homeassistant", "--config", "/config", "--log-rotate-days", '3' ]
+      ports:
+        - '8123:8123'
+        - '8943:8943'
+      volumes:
+        - ./home-assistant/config:/config
+        - '/etc/localtime:/etc/localtime:ro'
+        - '/etc/timezone:/etc/timezone:ro'
+      devices:
+        - /dev/ttyACM0:/dev/ttyACM0
+      restart: unless-stopped
+      tty: true
+    zigbee2mqtt:
+      container_name: zigbee2mqtt
+      image: koenkk/zigbee2mqtt
+      volumes:
+        - ./zigbee2mqtt/data:/app/data
+        - /run/udev:/run/udev:ro
+      devices:
+        - /dev/ttyUSB0:/dev/ttyUSB0
+        - /dev/ttyUSB1:/dev/ttyUSB1
+        - /dev/ttyACM0:/dev/ttyACM0
+      restart: unless-stopped
+      privileged: true
+      environment:
+        - TZ=Europe/Helsinki
+      tty: true
+    mosquitto:
+      container_name: mosquitto
+      image: leojrfs/mosquitto-arm:latest
+      restart: unless-stopped
+      volumes:
+        - ./mosquitto/data:/mosquitto/data
+        - ./mosquitto/log:/mosquitto/log
+        - ./mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf
+      ports:
+        - "1883:1883"
+        - "9001:9001"
+      tty: true
