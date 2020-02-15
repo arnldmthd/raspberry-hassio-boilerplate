@@ -28,7 +28,7 @@ ssh ubuntu@$value sudo usermod -aG sudo ubuntu
 ## Wlan Setup
 
 echo "🧞‍  rsync -avz -e ssh *wlan ubuntu@$value:/home/ubuntu/project/*wlan"
-rsync -avz -e ssh *wlan ubuntu@$value:/home/ubuntu/project/*wlan
+rsync -avz -e ssh ./*wlan ubuntu@$value:/home/ubuntu/project/wlan
 
 echo "🧞‍♂  ssh ubuntu@$value cd project && sudo ./restart-wlan.sh"
 ssh ubuntu@$value 'cd project && sudo ./restart-wlan.sh'

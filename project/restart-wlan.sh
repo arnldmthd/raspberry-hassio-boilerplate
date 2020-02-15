@@ -1,6 +1,6 @@
 
-ssid=$(head -n 1 *wlan)
-wlanPassword=$(head -n 2 *wlan)
+ssid=$(cat wlan | awk 'NR==1')
+wlanPassword=$(cat wlan | awk 'NR==2')
 
 echo "🧞‍♂  sudo apt-get install wireless-tools -y"
 sudo apt-get install wireless-tools -y
