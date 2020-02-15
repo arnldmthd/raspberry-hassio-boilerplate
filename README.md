@@ -19,20 +19,3 @@
 18. Disconnect Raspeberry ethernet cable
 19. Run project in Raspberry by `./remote-start.sh`
 
-
-# Commands
-
-```
-# Connect to remote via SSH
-./connect
-
-# Adds your local ssh to remote ssh keys so you dont need password
-./add-ssh-key.sh
-
-# Deploys Docker containers into remote
-./deploy.sh
-
-```
-
-
-ifconfig wlan0 | sed -e 's/inet\(.*\)  netmask/\1/'
