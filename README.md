@@ -11,8 +11,8 @@
 9. Change password
 10. Exit from raspberry
 11. Create SSH key on your local machine
-12 ./add-ssh-key.sh
-13 ./connect.sh (should not ask password)
+12. ./add-ssh-key.sh
+13. ./connect.sh (should not ask password)
 
 # Commands
 
